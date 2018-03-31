@@ -7,33 +7,31 @@ var expect = require('chai').expect;
 var Utils = require('../utils/Utils');
 var utils = new Utils();
 
+const selection1 = "//div[@class='title-wrapper']/h3[contains(text(),'I want to call Lloyds Bank')]";
+const selection2 = "//div[@class='title-wrapper']/h3[contains(text(),'My card is lost or stolen')]";
+const selection3 = "//div[@class='title-wrapper']/h3[contains(text(),'noticed suspicious activity')]";
+const selection4 = "//div[@class='title-wrapper']/h3[contains(text(),'Ask a question')]";
+const selection5 = "//div[@class='title-wrapper']/h3[contains(text(),'Self Service')]";
+const selection6 = "//div[@class='title-wrapper']/h3[contains(text(),'Make a complaint')]";
 
-const option1 = "//div[@class='title-wrapper']/h3[contains(text(),'I want to call Lloyds Bank')]";
-const option2 = "//div[@class='title-wrapper']/h3[contains(text(),'My card is lost or stolen')]";
-const option3 = "//div[@class='title-wrapper']/h3[contains(text(),'noticed suspicious activity')]";
-const option4 = "//div[@class='title-wrapper']/h3[contains(text(),'Ask a question')]";
-const option5 = "//div[@class='title-wrapper']/h3[contains(text(),'Self Service')]";
-const option6 = "//div[@class='title-wrapper']/h3[contains(text(),'Make a complaint')]";
-
-const expectedTitle = "Lloyds Bank - Contact Information - Phone Numbers, Branch Info & More";
-
+const expectedTitleText = "Lloyds Bank - Contact Information - Phone Numbers, Branch Info & More";
 
 class ContactUsPage {
 
 assertContactUsPageTitle(){	
 		 
-		 utils.assertTitle(expectedTitle);
+		 utils.assertTitle(expectedTitleText);
 
 		}
 
 assertPageElements(){
 		
-		assert.isTrue(browser.isVisible(option1));
-		assert.isTrue(browser.isVisible(option2));
-		assert.isTrue(browser.isVisible(option3));
-		assert.isTrue(browser.isVisible(option4));
-		assert.isTrue(browser.isVisible(option5));
-		assert.isTrue(browser.isVisible(option6));
+		assert.isTrue(browser.isVisible(selection1));
+		assert.isTrue(browser.isVisible(selection2));
+		assert.isTrue(browser.isVisible(selection3));
+		assert.isTrue(browser.isVisible(selection4));
+		assert.isTrue(browser.isVisible(selection5));
+		assert.isTrue(browser.isVisible(selection6));
 
 }
 }
