@@ -3,8 +3,6 @@ let chai = require('chai');
 let chaiAsPromised = require('chai-as-promised');
 let assert = require('chai').assert;
 let expect = require('chai').expect;
-
-let Utils = require('../utils/Utils');
 const expectedTitleText = "Lloyds Bank - Contact Information - Phone Numbers, Branch Info & More";
 
 const selection1 = "//div[@class='title-wrapper']/h3[contains(text(),'I want to call Lloyds Bank')]";
